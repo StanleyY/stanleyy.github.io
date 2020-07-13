@@ -1,9 +1,11 @@
 <html>
 <body>
-<h1>Stan has not been outdoors for: <span id="stan-time">Hi</span></h1>
+<h1>Stan finally went outside on: <span id="stan-end-time"></span>. </h1>
+<span id="stan-since-time"></span>
 </body>
 <script>
-const stanLast = new Date('March 23, 2020 10:04:31 EDT');
+const stanLastOut = new Date('March 23, 2020 10:04:31 EDT');
+const stanEnd = new Date('July 12, 2020 13:37:00 EDT');
 const MIN_SEC = 60;
 const HOUR_SEC = 60 * MIN_SEC;
 const DAY_SEC = 24 * HOUR_SEC;
@@ -17,16 +19,9 @@ function getTimeDeltaStr(orig, curr) {
   return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 }
 
-function refresh() {
-  const now = new Date();
-  var stanSpan = document.getElementById('stan-time');
-  stanSpan.innerText = getTimeDeltaStr(stanLast, now);
-}
-
-refresh();
-
-let loop = setInterval(function(){
-  refresh();
-}, 1000)
+var stanSpan = document.getElementById('stan-since-time');
+stanSpan.innerHTML = `After being indoors since <b>${stanLastOut.toLocaleDateString()}</b> (${getTimeDeltaStr(stanLastOut, stanEnd)})`;
+var stanEndDateSpan = document.getElementById('stan-end-time');
+stanEndDateSpan.innerText = stanEnd.toLocaleDateString() + ' ' + stanEnd.toLocaleTimeString();
 </script>
 </html>
