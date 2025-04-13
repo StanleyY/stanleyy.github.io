@@ -110,12 +110,14 @@ p.metadata {
 a {
   color: #0056b3; /* A standard blue link color */
   text-decoration: none; /* Remove default underline */
+  height: 16px;
 }
 
 a:hover,
 a:focus {
   text-decoration: underline; /* Add underline on hover/focus for clarity */
   color: #003d80; /* Darken link on hover */
+  background-color: #f3f3f3; /* Light background on hover */
 }
 
 img {
@@ -124,4 +126,9 @@ img {
   display: block;
   margin-top: 1.5em; /* Add space above images */
   margin-bottom: 1.5em; /* Add space below images */
+}
+
+ul, li {
+  line-height: 0.5em;
+  margin: 0;
 }
