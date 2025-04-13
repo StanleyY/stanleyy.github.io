@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 100%;
   line-height: 1.6; /* Improves text readability */
   padding: 1em; /* Adds space around the edges of the viewport */
@@ -20,7 +20,6 @@ body {
 
 main.content-column {
   /* Maximum width for the content - prevents lines becoming too long on wide screens */
-  /* Common values range from 600px to 800px, or use em units like 45em */
   max-width: 50em;
 
   /* These two lines automatically center the block element horizontally */
@@ -41,29 +40,7 @@ main.content-column {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 
   /* Rounded corners */
-  border-radius: 8px;
-}
-
-
-/* --- Basic Header/Footer Centering (Optional) --- */
-/* Apply similar centering if your header/footer should align with the content */
-
-header,
-footer {
-    max-width: 700px; /* Match the content column width */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2em;  /* Match content padding if needed */
-    padding-right: 2em; /* Match content padding if needed */
-    text-align: center; /* Example alignment */
-    margin-bottom: 1em; /* Space below header */
-    margin-top: 1em;    /* Space above footer */
-}
-
-footer {
-    margin-top: 2em;
-    font-size: 0.9em;
-    color: #666;
+  border-radius: 0.5em;
 }
 
 /* --- Typographic Hierarchy & Spacing --- */
@@ -110,7 +87,7 @@ p.metadata {
 a {
   color: #0056b3; /* A standard blue link color */
   text-decoration: none; /* Remove default underline */
-  height: 16px;
+  height: 1em;
 }
 
 a:hover,
@@ -129,7 +106,7 @@ img {
 }
 
 ul, li {
-  height: 16px;
-  line-height: 16px;
+  height: 1em;
+  line-height: 1em;
   margin: 0 0 8px 0;
 }
