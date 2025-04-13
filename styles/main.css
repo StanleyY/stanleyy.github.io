@@ -1,0 +1,127 @@
+/* --- Basic Reset & Body Defaults --- */
+* {
+  /* Remove default browser margins and padding */
+  margin: 0;
+  padding: 0;
+  /* Makes sizing elements more intuitive (includes padding/border in width/height) */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.6; /* Improves text readability */
+  padding: 1em; /* Adds space around the edges of the viewport */
+  background-color: #f4f4f4; /* A very light grey background for the page */
+  color: #333; /* Default text color (dark grey) */
+}
+
+/* --- Core Content Column Layout --- */
+
+main.content-column {
+  /* Maximum width for the content - prevents lines becoming too long on wide screens */
+  /* Common values range from 600px to 800px, or use em units like 45em */
+  max-width: 50em;
+
+  /* These two lines automatically center the block element horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Add space above the main content block */
+  margin-top: 1.5em;
+  /* Add space below the main content block */
+  margin-bottom: 1.5em;
+
+  /* Add padding inside the content block for text spacing */
+  padding: 2em;
+
+  background-color: #fafafa; /* White background for the article area */
+
+  /* Subtle shadow for depth */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+  /* Rounded corners */
+  border-radius: 8px;
+}
+
+
+/* --- Basic Header/Footer Centering (Optional) --- */
+/* Apply similar centering if your header/footer should align with the content */
+
+header,
+footer {
+    max-width: 700px; /* Match the content column width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;  /* Match content padding if needed */
+    padding-right: 2em; /* Match content padding if needed */
+    text-align: center; /* Example alignment */
+    margin-bottom: 1em; /* Space below header */
+    margin-top: 1em;    /* Space above footer */
+}
+
+footer {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- Typographic Hierarchy & Spacing --- */
+
+h1 {
+  font-size: 2em; /* Approx 32px */
+  font-weight: 700; /* Bold */
+  line-height: 1.2; /* Slightly tighter line height for heading */
+  margin-bottom: 0.75em; /* Space below H1 */
+  /* color: #1c4587; */
+}
+
+h2 {
+  font-size: 1.5em; /* Approx 24px */
+  font-weight: 700; /* Bold */
+  line-height: 1.3;
+  margin-top: 1.5em; /* Space above H2 */
+  margin-bottom: 0.5em; /* Space below H2 */
+  /* color: #1155cc; */
+}
+
+h3 {
+  font-size: 1.2em; /* Approx 19px */
+  font-weight: 700; /* Bold */
+  line-height: 1.4;
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+  /* color: #3c78d8; */
+}
+
+p {
+  /* Space below paragraphs */
+  margin-bottom: 1em;
+}
+
+/* Style for the metadata paragraph if you have one */
+p.metadata {
+    font-size: 0.9em; /* Slightly smaller */
+    color: #666; /* Lighter grey */
+    margin-bottom: 2em; /* Extra space before content starts */
+}
+
+/* Ensure links stand out slightly */
+a {
+  color: #0056b3; /* A standard blue link color */
+  text-decoration: none; /* Remove default underline */
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline; /* Add underline on hover/focus for clarity */
+  color: #003d80; /* Darken link on hover */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 1.5em; /* Add space above images */
+  margin-bottom: 1.5em; /* Add space below images */
+}
